@@ -16,7 +16,7 @@ const Projects = () => {
             
             <ProjectCard image={bg} title="Background Changer" main="Change background color of whole window " tech="HTML, CSS, JS" demolink="https://bgchanger49.vercel.app/" sourcelink="https://github.com/smaurya4941/BackgroundChanger"/>
 
-            <ProjectCard image={todo} title="Daily Dash" main="App to manage your tasks " tech="HTML, CSS, JS, Django, bootstrap" demolink="https://sachinportfolio-one.vercel.app/" sourcelink="https://github.com/smaurya4941/BackgroundChanger"/>
+            <ProjectCard image={todo} title="Daily Dash" main="App to manage your tasks " tech="HTML, CSS, JS, Django, bootstrap" demolink="https://daily-dash-gm54.vercel.app/" sourcelink="https://github.com/smaurya4941/dailyDash"/>
             
 
         </div>
