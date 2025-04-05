@@ -1,8 +1,8 @@
 import React from 'react'
+import completePython from '../../assets/CompletePython.png'
+import pythonAndDjango from '../../assets/Python_Django.png'
 import spi from '../../assets/softpro.png'
 import CertificateCard from './CertificateCard'
-import completePython from '../../assets/completePython.png'
-import pythonAndDjango from '../../assets/Python_Django.png'
 
 function Certifications() {
     return (
