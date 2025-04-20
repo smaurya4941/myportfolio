@@ -3,7 +3,7 @@ import about from '../../assets/about.png'
 import { IoArrowForward } from 'react-icons/io5'
 const About = () => {
     return (
-        <div  id='about' className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12'>
+        <div  id='about' className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-transparent shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12'>
             <div>
                 <h2 className='text-2xl md:text-4xl font-bold '>About</h2>
                 <div className='md:flex flex-wrap flex-col md:flex-row items-center'>
