@@ -7,7 +7,7 @@ import ProjectCard from './ProjectCard'
 
 const Projects = () => {
   return (
-    <div id='projects' className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center  shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12 mt-2  '>
+    <div id='projects' className='text-white md:flex overflow-hidden items-center bg-[#951ec4] md:flex-wrap md:justify-center  shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12 mt-2  '>
         <h1 className='text-2xl md:text-4xl text-white font-bold'>Projects</h1>
         <div className='flex flex-wrap items-center justify-around   mt-2'>
           <div className='py-12 px-8 flex flex-wrap gap-6 justify-evenly  rounded-lg opacity-90'>

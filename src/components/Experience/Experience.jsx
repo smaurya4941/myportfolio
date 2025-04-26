@@ -4,7 +4,7 @@ import { SiMongodb ,SiDjango ,SiTailwindcss , SiBootstrap} from 'react-icons/si'
 import softpro from '../../assets/softpro.png'
 const Experience = () => {
     return (
-        <div id='experience' className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12 mt-2 '>
+        <div id='experience' className='text-white md:flex overflow-hidden bg-[#afad66] items-center md:flex-wrap md:justify-center shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12 mt-2 '>
             <h1 className='text-2xl md:text-4xl text-white font-bold'>Experience</h1>
             <div className='flex flex-wrap items-center justify-around   mt-2'>
                 <div className='flex flex-wrap md:w-2/6 gap-10 md:p-12 py-10 '>
@@ -34,7 +34,7 @@ const Experience = () => {
                         <SiBootstrap color='#7952B3' size={50} className=' text-4xl' />
                     </span>
                     <span className='p-3 bg-zinc-950 flex items-center rounded-2xl'>
-                        <SiDjango color='#092e20' size={50} className=' text-4xl' />
+                        <SiDjango color='green' size={50} className=' text-4xl' />
                     </span>
                     <span className='p-3 bg-zinc-950 flex items-center rounded-2xl'>
                         <SiTailwindcss color='#38BDF8' size={50} className=' text-4xl' />
