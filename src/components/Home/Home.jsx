@@ -6,11 +6,16 @@ const Home = () => {
   return (
     <div className='text-white flex w-full justify-between items-start p-10 md:p-20 md:flex md:flex-row '>
       <div className=' w-2/3 md:w-2/4 md:pt-10 '>
-        <h1 className='text-3xl md:text-6xl font-bold text-[#eee367] leading-normal tracking-tighter'> <TextChanger /> </h1>
+        <h1 className='text-3xl md:text-6xl font-bold text-[#eee367] leading-normal tracking-tighter'>  <TextChanger /> </h1>
         <p className='text-sm md:text-2xl tracking-tight'>Aspiring software developer with strong foundation in Django, SQL and full-stack web
           development and also quick learner with a proactive approach to problem solving.</p>
 
-        <a href="#Footer"><button className='mt-5 md:m-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]'>Contact me
+        <a href="#Footer"><button className='mt-5 md:m-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 shadow-2xl hover:scale-105 font-semibold rounded-3xl bg-[#d4217edf] hover:bg-[#000] hover:text-white'>Contact me
+        </button>
+        </a>
+
+        <a href="/myresume.pdf"
+  download="myresume.pdf" ><button className='mt-5 md:m-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-3 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#d4217edf] hover:bg-[#0b0b0b]'> Download Resume
         </button>
         </a>
       </div>
