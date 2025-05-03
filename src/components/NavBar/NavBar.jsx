@@ -11,7 +11,7 @@ const NavBar = () => {
                 <a href="#about"><li className='text-md transition-all duration-300 p-1 md:p-0'>About</li></a>
                 <a href="#experience">  <li className='text-md transition-all duration-300 p-1 md:p-0'>Experience</li></a>
                 <a href="#projects"> <li className='text-md transition-all duration-300 p-1 md:p-0'>Projects</li> </a>
-                <a href="#certificate"> <li className='text-md transition-all duration-300 p-1 md:p-0'>Certificates</li> </a>
+                <a href="#certificates"> <li className='text-md transition-all duration-300 p-1 md:p-0'>Certificates</li> </a>
                 <a href="#Footer"> <li className='text-md transition-all duration-300 p-1 md:p-0'>Contact</li></a>
             </ul>
             {menu ? (
