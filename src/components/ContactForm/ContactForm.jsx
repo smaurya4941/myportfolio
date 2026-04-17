@@ -1,49 +1,80 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+
 const ContactForm = () => {
   const form = useRef();
+  const [status, setStatus] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      'service_nhs79u3',     // Replace with your actual Service ID
-      'template_phly94l',    // Replace with your actual Template ID
-      form.current,
-      'WR6FMIaER5nd-jwuB'      // Replace with your actual Public Key
-    )
+    setStatus("Sending...");
+
+    emailjs
+      .sendForm(
+        'service_nhs79u3',
+        'template_phly94l',
+        form.current,
+        'WR6FMIaER5nd-jwuB'
+      )
       .then(() => {
-        alert("Message sent successfully!");
+        setStatus("Message sent successfully.");
         form.current.reset();
       })
       .catch((error) => {
         console.error("Email error:", error);
-        alert("Failed to send message. Please try again.");
+        setStatus("Failed to send message. Please try again.");
       });
   };
 
   return (
-    <div className="bg-blue">
-      <div className="max-w-lg p-1 bg-blue shadow-lg rounded-2xl">
-        <h2 className="text-3xl font-bold mb-6 text-amber-300 text-center">Contact Me</h2>
-        <form ref={form} onSubmit={sendEmail} className="space-y-4">
-          <input type="text" name="from_name" placeholder="Your Name"
-            className="w-full px-4 py-2 border text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+    <div>
+      <h2 className="text-xl font-bold text-white">Send a message</h2>
+      <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
+        I usually respond to relevant opportunities, collaboration requests, and project inquiries.
+      </p>
 
-          <input type="email" name="from_email" placeholder="Your Email"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      <form ref={form} onSubmit={sendEmail} className="mt-4 space-y-3">
+        <input
+          type="text"
+          name="from_name"
+          placeholder="Your name"
+          className="w-full rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.04)] px-4 py-2.5 text-sm text-white placeholder:text-[var(--color-muted)] focus:border-[rgba(243,179,93,0.35)] focus:outline-none"
+          required
+        />
 
-          <input type="text" name="subject" placeholder="Your Subject"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        <input
+          type="email"
+          name="from_email"
+          placeholder="Your email"
+          className="w-full rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.04)] px-4 py-2.5 text-sm text-white placeholder:text-[var(--color-muted)] focus:border-[rgba(243,179,93,0.35)] focus:outline-none"
+          required
+        />
 
-          <textarea name="message" placeholder="Your Message" rows="5"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          className="w-full rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.04)] px-4 py-2.5 text-sm text-white placeholder:text-[var(--color-muted)] focus:border-[rgba(243,179,93,0.35)] focus:outline-none"
+          required
+        />
 
-          <button type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
-            Send Message
-          </button>
-        </form>
-      </div>
+        <textarea
+          name="message"
+          placeholder="Tell me a little about your project or opportunity"
+          rows="4"
+          className="w-full rounded-[1rem] border border-white/10 bg-[rgba(255,255,255,0.04)] px-4 py-2.5 text-sm text-white placeholder:text-[var(--color-muted)] focus:border-[rgba(243,179,93,0.35)] focus:outline-none"
+          required
+        />
+
+        <button
+          type="submit"
+          className="inline-flex rounded-full bg-[var(--color-accent)] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#09111f] transition hover:bg-[#ffc779]"
+        >
+          Send Message
+        </button>
+
+        {status && <p className="text-sm text-[var(--color-muted)]">{status}</p>}
+      </form>
     </div>
   );
 };

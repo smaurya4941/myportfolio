@@ -1,50 +1,77 @@
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { MdOutlineEmail } from 'react-icons/md'
+import { MdOutlineEmail, MdPhone } from 'react-icons/md'
+import { TbBrandLeetcode } from 'react-icons/tb'
+import { SiGeeksforgeeks } from 'react-icons/si'
 import ContactForm from "../ContactForm/ContactForm"
+
 const Footer = () => {
   return (
-    <div
-  id='Footer'
-  className='text-white bg-[#103a5a] bg-opacity-30 shadow-xl mx-0 md:mx-20 rounded-lg p-6 md:p-12 mt-2 mb-10 overflow-hidden'
->
-  <div className='flex flex-col md:flex-row items-center justify-center gap-10'>
-    
-    {/* Contact Form Section */}
-    <div className='w-full md:w-1/2'>
-      <ContactForm />
-    </div>
+    <section
+      id='contact'
+      className='mb-6 rounded-[1.75rem] border border-[var(--color-border)] bg-[linear-gradient(135deg,rgba(14,26,46,0.96),rgba(8,17,31,0.92))] p-5 shadow-[0_22px_70px_rgba(0,0,0,0.22)] md:p-7'
+    >
+      <div className='grid gap-5 lg:grid-cols-[0.95fr_1.05fr]'>
+        <div className='rounded-[1.3rem] border border-white/10 bg-[rgba(255,255,255,0.03)] p-4'>
+          <p className='text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]'>Contact</p>
+          <h3 className='mt-2 font-[var(--font-display)] text-[1.9rem] leading-tight text-white sm:text-[2.2rem]'>
+            Let&apos;s build something that looks sharp and works well.
+          </h3>
+          <p className='mt-3 max-w-xl text-sm leading-6 text-[var(--color-muted)]'>
+            If you have a web development, software development, internship, or junior developer opportunity in mind,
+            I would love to hear about it.
+          </p>
 
-    {/* Contact Info Section */}
-    <div className='w-full md:w-1/2 text-center md:text-left'>
-      <h3 className='text-2xl md:text-4xl font-bold mb-5 text-[#f2eeee]'>
-        Feel free to reach out
-      </h3>
+          <div className='mt-5 space-y-3'>
+            <div className='flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/5 p-3'>
+              <MdPhone size={22} className="text-[var(--color-accent)]" />
+              <a href="tel:+917084110492" className='text-sm text-white transition hover:text-[var(--color-accent)]'>
+                +91-7084110492
+              </a>
+            </div>
 
-      <ul className='text-lg md:text-2xl flex flex-col gap-3'>
-        <li className='flex items-center gap-3 text-[#0f0e0e]'>
-          <MdOutlineEmail size={30} className="text-red-500 hover:text-red-700 transition duration-300" />
-          sachinmaurya4941@gmail.com
-        </li>
+            <div className='flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/5 p-3'>
+              <MdOutlineEmail size={22} className="text-[var(--color-accent)]" />
+              <a href="mailto:sachinmaurya4941@gmail.com" className='text-sm text-white transition hover:text-[var(--color-accent)]'>
+                sachinmaurya4941@gmail.com
+              </a>
+            </div>
 
-        <li className='flex items-center gap-3 text-[#0f0e0e]'>
-          <FaGithub size={30} className="text-gray-800 hover:text-black transition duration-300" />
-          <a target='_blank' href="https://github.com/smaurya4941" className="hover:underline">
-            github.com/smaurya4941
-          </a>
-        </li>
+            <div className='flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/5 p-3'>
+              <FaGithub size={20} className="text-[var(--color-accent)]" />
+              <a target='_blank' rel='noreferrer' href="https://github.com/smaurya4941" className="text-sm text-white transition hover:text-[var(--color-accent)]">
+                github.com/smaurya4941
+              </a>
+            </div>
 
-        <li className='flex items-center gap-3 text-[#0f0e0e]'>
-          <FaLinkedin size={30} className="text-blue-600 hover:text-blue-800 transition duration-300" />
-          <a target='_blank' href="https://www.linkedin.com/in/smaurya4941/" className="hover:underline">
-            linkedin.com/in/smaurya4941/
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+            <div className='flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/5 p-3'>
+              <FaLinkedin size={20} className="text-[var(--color-accent)]" />
+              <a target='_blank' rel='noreferrer' href="https://www.linkedin.com/in/smaurya4941/" className="text-sm text-white transition hover:text-[var(--color-accent)]">
+                linkedin.com/in/smaurya4941
+              </a>
+            </div>
 
+            <div className='flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/5 p-3'>
+              <TbBrandLeetcode size={22} className="text-[var(--color-accent)]" />
+              <a target='_blank' rel='noreferrer' href="https://leetcode.com/u/smaurya4941/" className="text-sm text-white transition hover:text-[var(--color-accent)]">
+                leetcode.com/u/smaurya4941
+              </a>
+            </div>
+
+            <div className='flex items-center gap-3 rounded-[1rem] border border-white/10 bg-white/5 p-3'>
+              <SiGeeksforgeeks size={20} className="text-[var(--color-accent)]" />
+              <a target='_blank' rel='noreferrer' href="https://www.geeksforgeeks.org/user/smaurya4941/" className="text-sm text-white transition hover:text-[var(--color-accent)]">
+                geeksforgeeks.org/user/smaurya4941
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='rounded-[1.3rem] border border-white/10 bg-[rgba(255,255,255,0.03)] p-4'>
+          <ContactForm />
+        </div>
+      </div>
+    </section>
   )
 }
 
